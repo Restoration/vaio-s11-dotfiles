@@ -41,5 +41,3 @@ $ ./setup.sh
 Ryota Yamamoto  
 [RyotArch](https://github.com/Restoration)  
 [Ryota.Y](http://developer-ryota.com)  
-[arch@ArchLinux dotfiles]$ 
-
