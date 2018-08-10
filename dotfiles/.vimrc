@@ -1,5 +1,11 @@
-scriptencoding utf-8
+"
+"        _
+" __   _(_)_ __ ___  _ __ ___
+" \ \ / / | '_ ` _ \| '__/ __|
+"  \ V /| | | | | | | | | (__
+"   \_/ |_|_| |_| |_|_|  \___|
 
+scriptencoding utf-8
 
 "Basic Setting
 "-----------------------------------------------------
@@ -24,6 +30,11 @@ set cursorline
 set clipboard=unnamedplus
 set nobackup
 
+
+"Command Line
+"-----------------------------------------------------
+verbose set cmdheight=10
+
 "Font
 "-----------------------------------------------------
 "set guifont=Liberation
@@ -43,20 +54,59 @@ set title
 
 "Character
 "-----------------------------------------------------
-set encoding=utf-8
 "set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 "set fileformats=unix,dos,mac
+set encoding=utf-8
 set fileencodings=utf-8
-
 
 "Keybind
 "-----------------------------------------------------
-nmap :tn :tabnew<CR>
-nmap :ex :exit<CR>
-nmap :ps :split<CR>
-nmap :vs :vsplit<CR>
-nmap :nt :NERDTree<CR>
-nmap :tm :terminal<CR>
+nmap :tn  :tabnew<CR>
+nmap :ex  :exit<CR>
+nmap :ps  :split<CR>
+nmap :vs  :vsplit<CR>
+"nmap :nt  :NERDTree<CR>
+nmap :nt  :NERDTreeTabsToggle<CR>
+nmap :tm  :terminal<CR>
+nmap :mc  :MultipleCursorsFind<CR>
+nmap :tag :TagbarShowTag<CR>
+
+
+ "____        _                  _
+"/ ___| _ __ (_)_ __  _ __   ___| |_ ___
+"\___ \| '_ \| | '_ \| '_ \ / _ \ __/ __|
+ "___) | | | | | |_) | |_) |  __/ |_\__ \
+"|____/|_| |_|_| .__/| .__/ \___|\__|___/
+              "|_|   |_|
+
+"dein
+"---------------------------------------------------
+if &compatible
+
+  set nocompatible
+
+endif
+
+set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
+
+call dein#begin(expand('~/.vim/dein'))
+call dein#add('Shougo/dein.vim')
+call dein#add('Shougo/vimproc.vim', {'build': 'make'})
+call dein#add('Shougo/neocomplete.vim')
+call dein#add('Shougo/neosnippet')
+call dein#add('Shougo/neosnippet-snippets')
+call dein#add('mattn/emmet-vim')
+call dein#add('AtsushiM/search-parent.vim')
+call dein#add('AtsushiM/sass-compile.vim')
+call dein#add('scrooloose/nerdtree')
+call dein#add('jistr/vim-nerdtree-tabs')
+call dein#add('majutsushi/tagbar')
+call dein#add('tpope/vim-fugitive')
+call dein#add('reireias/vim-cheatsheet')
+call dein#add('terryma/vim-multiple-cursors')
+call dein#add('vim-airline/vim-airline')
+call dein#end()
+
 
 "vim-cheatsheet
 "-----------------------------------------------------
@@ -90,40 +140,10 @@ let g:sass_compile_beforecmd = ''
 let g:sass_compile_aftercmd = ''
 "}}}
 
-
-
-"dein
+"Tagbar
 "---------------------------------------------------
-if &compatible
-
-  set nocompatible
-
-endif
-
-set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
-
-call dein#begin(expand('~/.vim/dein'))
-call dein#add('Shougo/dein.vim')
-call dein#add('Shougo/vimproc.vim', {'build': 'make'})
-call dein#add('Shougo/neocomplete.vim')
-"call dein#add('Shougo/neomru.vim')
-call dein#add('Shougo/neosnippet')
-call dein#add('Shougo/neosnippet-snippets')
-call dein#add('mattn/emmet-vim')
-call dein#add('AtsushiM/search-parent.vim')
-call dein#add('AtsushiM/sass-compile.vim')
-call dein#add('scrooloose/nerdtree')
-call dein#add('jistr/vim-nerdtree-tabs')
-call dein#add('majutsushi/tagbar')
-call dein#add('tpope/vim-fugitive')
-call dein#add('osyo-manga/vim-over')
-call dein#add('reireias/vim-cheatsheet')
-call dein#add('terryma/vim-multiple-cursors')
-call dein#add('suan/vim-instant-markdown')
-call dein#add('vim-airline/vim-airline')
-call dein#end()
-
-
+let g:tagbar_width = 30
+let g:tagbar_autoshowtag = 1
 
 "Autocomand
 "---------------------------------------------------
@@ -136,17 +156,10 @@ autocmd VimEnter * execute 'syntax on'
 "Colorscheme
 "-----------------------------------------------------
 colorscheme archery
-"colorscheme kalisi
 set showtabline=2
 set termguicolors
 set t_Co=25
 let g:airline_theme = 'archery'
-
-highlight Normal ctermbg=none
-highlight NonText ctermbg=none
-highlight LineNr ctermbg=none
-highlight Folded ctermbg=none
-highlight EndOfBuffer ctermbg=none 
 
 augroup TransparentBG
   	autocmd!
