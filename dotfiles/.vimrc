@@ -17,7 +17,9 @@ set tabstop=4
 set expandtab
 set shiftwidth=4
 set smartindent
-set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+set list
+"set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%
 set nrformats-=octal
 set virtualedit=block
 set whichwrap+=b,s,[,],<,>
@@ -70,6 +72,8 @@ nmap :nt  :NERDTreeTabsToggle<CR>
 nmap :tm  :terminal<CR>
 nmap :mc  :MultipleCursorsFind<CR>
 nmap :tag :TagbarShowTag<CR>
+"nmap ^E ^E,
+nmap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
 
 
  "____        _                  _
@@ -96,8 +100,8 @@ call dein#add('Shougo/neocomplete.vim')
 call dein#add('Shougo/neosnippet')
 call dein#add('Shougo/neosnippet-snippets')
 call dein#add('mattn/emmet-vim')
-call dein#add('AtsushiM/search-parent.vim')
-call dein#add('AtsushiM/sass-compile.vim')
+"call dein#add('AtsushiM/search-parent.vim')
+"call dein#add('AtsushiM/sass-compile.vim')
 call dein#add('scrooloose/nerdtree')
 call dein#add('jistr/vim-nerdtree-tabs')
 call dein#add('majutsushi/tagbar')
@@ -121,7 +125,7 @@ let g:neosnippet#snippets_directory='~/.vim/neosnippet-snippets'
 
 "emmet
 "----------------------------------------------------
-let g:user_emmet_leader_key='<c-e>'
+let g:user_emmet_leader_key='<C-e>'
 let g:user_emmet_settings = {
     \    'variables': {
     \      'lang': "en"
@@ -132,12 +136,12 @@ let g:user_emmet_settings = {
 "sass
 "---------------------------------------------------
 ""{{{
-let g:sass_compile_auto = 1
-let g:sass_compile_cdloop = 5
-let g:sass_compile_cssdir = ['css', 'stylesheet']
-let g:sass_compile_file = ['scss', 'sass']
-let g:sass_compile_beforecmd = ''
-let g:sass_compile_aftercmd = ''
+"let g:sass_compile_auto = 1
+"let g:sass_compile_cdloop = 5
+"let g:sass_compile_cssdir = ['css', 'stylesheet']
+"let g:sass_compile_file = ['scss', 'sass']
+"let g:sass_compile_beforecmd = ''
+"let g:sass_compile_aftercmd = ''
 "}}}
 
 "Tagbar
@@ -155,17 +159,21 @@ autocmd VimEnter * execute 'syntax on'
 
 "Colorscheme
 "-----------------------------------------------------
+autocmd ColorScheme * highlight Normal ctermbg=none
+autocmd ColorScheme * highlight LineNr ctermbg=none
+augroup TransparentBG
+        autocmd!
+        autocmd Colorscheme * highlight Normal ctermbg=none
+        autocmd Colorscheme * highlight NonText ctermbg=none
+        autocmd Colorscheme * highlight LineNr ctermbg=none
+        autocmd Colorscheme * highlight Folded ctermbg=none
+        autocmd Colorscheme * highlight EndOfBuffer ctermbg=none
+augroup END
+
 colorscheme archery
+"colorscheme citylights
 set showtabline=2
 set termguicolors
 set t_Co=25
 let g:airline_theme = 'archery'
 
-augroup TransparentBG
-  	autocmd!
-	autocmd Colorscheme * highlight Normal ctermbg=none
-	autocmd Colorscheme * highlight NonText ctermbg=none
-	autocmd Colorscheme * highlight LineNr ctermbg=none
-	autocmd Colorscheme * highlight Folded ctermbg=none
-	autocmd Colorscheme * highlight EndOfBuffer ctermbg=none 
-augroup END
