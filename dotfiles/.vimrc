@@ -1,3 +1,4 @@
+
 "
 "        _
 " __   _(_)_ __ ___  _ __ ___
@@ -109,6 +110,7 @@ call dein#add('tpope/vim-fugitive')
 call dein#add('reireias/vim-cheatsheet')
 call dein#add('terryma/vim-multiple-cursors')
 call dein#add('vim-airline/vim-airline')
+call dein#add('ctrlpvim/ctrlp.vim')
 call dein#end()
 
 
