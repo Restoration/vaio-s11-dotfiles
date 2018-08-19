@@ -18,3 +18,10 @@ export PATH="~/.config/composer/vendor/bin:$PATH"
 #export VISUAL="nvim"
 
 
+# My aliases
+alias p="sudo pacman "
+alias mix="alsamixer"
+alias dis="xbacklight -set"
+alias v="vim"
+alias r="ranger"
+alias g="git"
