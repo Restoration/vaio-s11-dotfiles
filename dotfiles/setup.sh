@@ -23,6 +23,7 @@ CONFIG_DOT_FILES=(
   awesome
   nvim
   roxterm.sourceforge.net
+  ranger
 )
 
 for file in ${CONFIG_DOT_FILES[@]}
