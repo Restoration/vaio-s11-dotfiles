@@ -98,11 +98,12 @@ call dein#begin(expand('~/.vim/dein'))
 call dein#add('Shougo/dein.vim')
 call dein#add('Shougo/vimproc.vim', {'build': 'make'})
 call dein#add('Shougo/neocomplete.vim')
+call dein#add('Shougo/neocomplcache')
 call dein#add('Shougo/neosnippet')
 call dein#add('Shougo/neosnippet-snippets')
 call dein#add('mattn/emmet-vim')
-"call dein#add('AtsushiM/search-parent.vim')
-"call dein#add('AtsushiM/sass-compile.vim')
+call dein#add('AtsushiM/search-parent.vim')
+call dein#add('AtsushiM/sass-compile.vim')
 call dein#add('scrooloose/nerdtree')
 call dein#add('jistr/vim-nerdtree-tabs')
 call dein#add('majutsushi/tagbar')
@@ -125,6 +126,11 @@ imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
 let g:neosnippet#snippets_directory='~/.vim/neosnippet-snippets'
 
+"neocomplcache
+"-----------------------------------------------------
+let g:neocomplcache_enable_at_startup = 1
+
+
 "emmet
 "----------------------------------------------------
 let g:user_emmet_leader_key='<C-e>'
@@ -138,13 +144,15 @@ let g:user_emmet_settings = {
 "sass
 "---------------------------------------------------
 ""{{{
-"let g:sass_compile_auto = 1
-"let g:sass_compile_cdloop = 5
-"let g:sass_compile_cssdir = ['css', 'stylesheet']
-"let g:sass_compile_file = ['scss', 'sass']
-"let g:sass_compile_beforecmd = ''
-"let g:sass_compile_aftercmd = ''
+	let g:sass_compile_auto = 1
+	let g:sass_compile_cdloop = 5
+	let g:sass_compile_cssdir = ['css', 'stylesheet']
+	let g:sass_compile_file = ['scss', 'sass']
+	let g:sass_compile_beforecmd = ''
+	let g:sass_compile_aftercmd = ''
 "}}}
+
+
 
 "Tagbar
 "---------------------------------------------------
@@ -172,8 +180,8 @@ augroup TransparentBG
         autocmd Colorscheme * highlight EndOfBuffer ctermbg=none
 augroup END
 
-colorscheme archery
-"colorscheme citylights
+"colorscheme archery
+colorscheme citylights
 set showtabline=2
 set termguicolors
 set t_Co=25
