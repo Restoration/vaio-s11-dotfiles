@@ -1,4 +1,3 @@
-
 "
 "        _
 " __   _(_)_ __ ___  _ __ ___
@@ -101,6 +100,7 @@ call dein#add('Shougo/neocomplete.vim')
 call dein#add('Shougo/neocomplcache')
 call dein#add('Shougo/neosnippet')
 call dein#add('Shougo/neosnippet-snippets')
+call dein#add('honza/vim-snippets')
 call dein#add('mattn/emmet-vim')
 call dein#add('AtsushiM/search-parent.vim')
 call dein#add('AtsushiM/sass-compile.vim')
@@ -218,6 +218,8 @@ let g:neocomplcache_force_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\
 " https://github.com/c9s/perlomni.vim
 let g:neocomplcache_force_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
+
+
 "emmet
 "----------------------------------------------------
 let g:user_emmet_leader_key='<C-e>'
@@ -273,4 +275,3 @@ set showtabline=2
 set termguicolors
 set t_Co=25
 let g:airline_theme = 'archery'
-
