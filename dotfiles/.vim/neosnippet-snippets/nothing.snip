@@ -1,0 +1,50 @@
+snippet if
+    if(${1:code}){
+    }
+
+snippet for
+	for($i = 0; $i < count; $i++){
+	}
+
+snippet func
+	function ${1:code}(){
+	}
+
+snippet forin
+	for(${1:code}in${2:code}){
+		${3:code}
+	}
+
+
+snippet cnl
+	console.log(${1:code});
+
+snippet jquery
+        jQuery(document).ready(function($){
+                ${1:code}
+        });
+
+snippet ajax
+        var data = {};
+        $.ajax({
+                url: '/',
+                type: 'POST',
+                data: data,
+                processData: false,
+                contentType: false,
+                success: function(data) {
+                        console.log(data);
+                        var pres = $.parseJSON(data);
+                        console.log(pres);
+                },
+                error: function(request, status, error) {
+                        console.log(request);
+                        console.log(status);
+                        console.log(error);
+                        alert("失敗しました");
+                }
+        });
+        return false;
+
+snippet vd
+	var_dump(${1:code});
