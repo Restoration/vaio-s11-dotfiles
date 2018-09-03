@@ -34,7 +34,7 @@ $ ./setup.sh
 
 ## License
 
-[MIT](https://github.com/Restoration/ArchLinux-dotfiles/blob/master/LICENSE.md)
+[GNU](https://github.com/Restoration/ArchLinux-dotfiles/blob/master/LICENSE)
 
 ## Author
 
