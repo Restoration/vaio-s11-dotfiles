@@ -97,3 +97,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# My aliases
+alias p="sudo pacman "
+alias mi="alsamixer"
+alias mp="mocp"
+alias d="xbacklight -set"
+alias v="vim"
+alias r="ranger"
+alias g="git"
