@@ -14,7 +14,7 @@ VAIO S11 environment for ArchLinux.
 * awesome
 
 ### Editor
-* Vim ([The Ultimate Vim configuration](ttps://github.com/amix/vimrc) and my custom)
+* Vim ([The Ultimate Vim configuration Awesome version](ttps://github.com/amix/vimrc) and my custom)
 * NVim (My Original configuration)
 
 ### Shell
@@ -29,6 +29,7 @@ VAIO S11 environment for ArchLinux.
 $ git clone https://github.com/Restoration/ArchLinux-dotfiles.git
 $ cd ArchLinux-dotfiles/dotfiles
 $ ./setup.sh
+$ git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 ```
 
 ## License
