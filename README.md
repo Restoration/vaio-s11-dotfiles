@@ -14,9 +14,8 @@ VAIO S11 environment for ArchLinux.
 * awesome
 
 ### Editor
-* Vim
-* NVim
-* GVim
+* Vim ([The Ultimate Vim configuration](ttps://github.com/amix/vimrc) and my custom)
+* NVim (My Original configuration)
 
 ### Shell
 * bash
