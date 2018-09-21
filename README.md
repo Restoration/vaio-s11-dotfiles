@@ -1,11 +1,12 @@
 # Dotfiles
----
 
 This dotfile is my ArchLinux config.
 
 ## Description
 
 VAIO S11 environment for ArchLinux.
+
+## Requirement
 
 ### Login Manager
 * SLiM
@@ -14,8 +15,8 @@ VAIO S11 environment for ArchLinux.
 * awesome
 
 ### Editor
-* Vim ([The Ultimate Vim configuration Awesome version](ttps://github.com/amix/vimrc) and my custom)
-* NVim (My Original configuration)
+* Vim ([The Ultimate Vim configuration Awesome version](https://github.com/amix/vimrc) and my custom)
+* NeoVim (My Original configuration)
 
 ### Shell
 * bash
