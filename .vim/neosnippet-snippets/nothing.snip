@@ -54,13 +54,45 @@ snippet newdate
     var minute = d.getMinutes();
     var second = d.getSeconds();
 
+snippet react
+    import React, { Component } from 'react';
+    class App extends Component{
+        constructor(props) {
+            super(props);
+        }
+        render(){
+            return(
+                <div>
+                    <h1>Hello World</h1>
+                </div>
+            );
+        }
+    }
+
+snippet reactdom
+    ReactDOM.render(<App />, document.getElementById('app'));
+
+
+snippet reactAjax
+    function getData(url){
+        // Get JSON Data
+        return fetch(url)
+            .then((response) => response.json())
+            .then((responseJson) => {
+                renderData(responseJson);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+        return false;
+    }
 
 snippet jquery
         jQuery(document).ready(function($){
                 ${1:code}
         });
 
-snippet ajax
+snippet jqueryAjax
         var data = {};
         $.ajax({
                 url: '/',
