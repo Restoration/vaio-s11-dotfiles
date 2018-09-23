@@ -1,30 +1,120 @@
 snippet if
-    if(${1:code}){
+    if(){
+    }
+
+snippet ifelse
+    if(){
+    } else {
+    }
+
+snippet while
+    while (i < 3) {
+        i++;
     }
 
 snippet for
-	for($i = 0; $i < count; $i++){
-	}
+    for(var i = 0; i < ; i++){
+    }
 
 snippet func
-	function ${1:code}(){
-	}
+    function (){
+    }
 
-snippet forin
-	for(${1:code}in${2:code}){
-		${3:code}
-	}
+snippet for
+    for( in ){
+    }
+
+snippet con
+    console.log();
 
 
-snippet cnl
-	console.log(${1:code});
+snippet aTag
+    var e = document.getElementById("");
+    var aTag = document.createElement("a");
+    aTag.setAttribute("href","path");
+    aTag.innerHTML = "text";
+    e.appendChild(aTag);
+
+snippet window
+    window.onload = function(){
+    };
+
+snippet zeroformat
+    var zeroformat = function(val){
+        val += "";
+        if(val.length === 1){
+            val = "0" + val;
+        }
+        return val;
+    }
+
+snippet newdate
+    var d = new Date();
+    var year = d.getFullYear();
+    var month = d.getMonth() + 1;
+    var date = d.getDate();
+    var day = d.getDay();
+    var week = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+    day = week[day];
+    var hour = d.getHours();
+    var minute = d.getMinutes();
+    var second = d.getSeconds();
+
+snippet defaultArg
+    var val = typeof val !== 'undefined' ? val ; '';
+
+snippet geturl
+    var host = location.hostname;
+    var path = location.pathname;
+    var query = location.search;
+    var protocol = location.protocol;
+
+snippet addScriptHeader
+    var addScript = document.createElement('script');
+    addScript.type = 'text/javascript';
+    addScript.src = "path";
+    document.head.appendChild(addScript);
+
+
+snippet react
+    import React, { Component } from 'react';
+    class App extends Component{
+        constructor(props) {
+            super(props);
+        }
+        render(){
+            return(
+                <div>
+                    <h1>Hello World</h1>
+                </div>
+            );
+        }
+    }
+
+snippet reactdom
+    ReactDOM.render(<App />, document.getElementById('app'));
+
+
+snippet reactAjax
+    function getData(url){
+        // Get JSON Data
+        return fetch(url)
+            .then((response) => response.json())
+            .then((responseJson) => {
+                renderData(responseJson);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+        return false;
+    }
 
 snippet jquery
         jQuery(document).ready(function($){
                 ${1:code}
         });
 
-snippet ajax
+snippet jqueryAjax
         var data = {};
         $.ajax({
                 url: '/',
@@ -46,5 +136,3 @@ snippet ajax
         });
         return false;
 
-snippet vd
-	var_dump(${1:code});
