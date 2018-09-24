@@ -75,6 +75,16 @@ snippet addScriptHeader
     addScript.src = "path";
     document.head.appendChild(addScript);
 
+snippet getTargetToNow
+    // Return the date from a specific past date to now
+    function getTargetToNow(y,m,d){
+        var t = new Date();
+        var a = new Date(y,m,d);
+        var d = t.getTime() - a.getTime();
+        var dms = 1000 * 60 * 60 * 24;
+        return Math.floor(d / dms);
+    }
+
 
 snippet react
     import React, { Component } from 'react';
