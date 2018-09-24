@@ -34,8 +34,8 @@ call dein#add('reireias/vim-cheatsheet')
 call dein#add('terryma/vim-multiple-cursors')
 call dein#add('vim-airline/vim-airline')
 call dein#add('ctrlpvim/ctrlp.vim')
+call dein#add('KabbAmine/vCoolor.vim')
 call dein#end()
-
 
 "vim-cheatsheet
 "-----------------------------------------------------
@@ -176,3 +176,9 @@ let g:tagbar_autoshowtag = 1
 "NERDTree
 "---------------------------------------------------
 let g:NERDTreeWinPos = "left"
+
+"vCoolor
+"---------------------------------------------------
+let g:vcoolor_lowercase = 1
+let g:vcoolor_disable_mappings = 1
+let g:vcoolor_map = '<leader>g'
