@@ -11,4 +11,4 @@ nmap :mc  :MultipleCursorsFind<CR>
 nmap :tag :TagbarShowTag<CR>
 "nmap ^E ^E,
 nmap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
-
+nmap :vc :VCoolor<CR>
