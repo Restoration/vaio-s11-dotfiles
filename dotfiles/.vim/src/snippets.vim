@@ -34,8 +34,8 @@ call dein#add('reireias/vim-cheatsheet')
 call dein#add('terryma/vim-multiple-cursors')
 call dein#add('vim-airline/vim-airline')
 call dein#add('ctrlpvim/ctrlp.vim')
+call dein#add('KabbAmine/vCoolor.vim')
 call dein#end()
-
 
 "vim-cheatsheet
 "-----------------------------------------------------
@@ -46,7 +46,9 @@ let g:cheatsheet#cheat_file = '~/.vim/.cheatsheet.md'
 "Plugin key-mappings
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
-let g:neosnippet#snippets_directory='~/.vim/neosnippet-snippets'
+let g:neosnippet#enable_snipmate_compatibility = 1
+let g:neosnippet#snippets_directory='~/.vim/snippet/'
+
 
 "neocomplcache
 "-----------------------------------------------------
@@ -174,3 +176,9 @@ let g:tagbar_autoshowtag = 1
 "NERDTree
 "---------------------------------------------------
 let g:NERDTreeWinPos = "left"
+
+"vCoolor
+"---------------------------------------------------
+let g:vcoolor_lowercase = 1
+let g:vcoolor_disable_mappings = 1
+let g:vcoolor_map = '<leader>g'
