@@ -1,3 +1,4 @@
+![ArchLinux](https://www.archlinux.org/static/logos/archlinux-logo-light-1200dpi.7ccd81fd52dc.png "ArchLinux")
 # Dotfiles
 
 This dotfile is my ArchLinux config.
