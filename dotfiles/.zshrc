@@ -108,6 +108,8 @@ alias r="ranger"
 alias g="git"
 alias ac="acpi"
 alias wifim="sudo wifi-menu"
+alias outpkg="sudo pacman -Qqen > pkg.list"
+alias outypkg="yaourt -Qqen > yaourt.pkg.list"
 
 # auto execute tmux
 #[[ -z "$TMUX" && ! -z "$PS1" ]] && exec tmux

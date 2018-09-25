@@ -1,3 +1,31 @@
+#   _____                .__      .____    .__
+#  /  _  \_______   ____ |  |__   |    |   |__| ____  __ _____  ___
+# /  /_\  \_  __ \_/ ___\|  |  \  |    |   |  |/    \|  |  \  \/  /
+#/    |    \  | \/\  \___|   Y  \ |    |___|  |   |  \  |  />    <
+#\____|__  /__|    \___  >___|  / |_______ \__|___|  /____//__/\_ \
+#        \/            \/     \/          \/       \/            \/
+#
+#                  -`
+#                 .o+`
+#                `ooo/
+#               `+oooo:
+#              `+oooooo:
+#              -+oooooo+:
+#            `/:-:++oooo+:
+#           `/++++/+++++++:
+#          `/++++++++++++++:
+#         `/+++ooooooooooooo/`
+#        ./ooosssso++osssssso+`
+#       .oossssso-````/ossssss+`
+#      -osssssso.      :ssssssso.
+#     :osssssss/        osssso+++.
+#    /ossssssss/        +ssssooo/-
+#  `/ossssso+/:-        -:/+osssso+-
+# `+sso+:-`                 `.-/+oso:
+#`++:.                           `-/+/
+#.`                                 `
+#
+
 #!/bin/sh
 
 userresources=$HOME/.Xresources
@@ -11,10 +39,6 @@ if [ -f $sysresources ]; then
 
 
 
-
-
-
-
     xrdb -merge $sysresources
 
 fi
@@ -24,12 +48,6 @@ if [ -f $sysmodmap ]; then
 fi
 
 if [ -f "$userresources" ]; then
-
-
-
-
-
-
 
     xrdb -merge "$userresources"
 
@@ -56,7 +74,6 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export DefaultIMModule=fcitx
-
 
 #exec startxfce4
 exec awesome
