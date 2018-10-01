@@ -35,6 +35,7 @@ call dein#add('terryma/vim-multiple-cursors')
 call dein#add('vim-airline/vim-airline')
 call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('KabbAmine/vCoolor.vim')
+call dein#add('cohama/lexima.vim')
 call dein#end()
 
 "vim-cheatsheet
