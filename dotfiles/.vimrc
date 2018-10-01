@@ -85,3 +85,11 @@ set fileencodings=utf-8
 autocmd VimEnter * execute 'syntax on'
 
 " let g:nerdtree_tabs_open_on_console_startup=1
+
+" close tag completion
+augroup MyXML
+  autocmd!
+  autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
+  autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
+  autocmd Filetype php inoremap <buffer> </ </<C-x><C-o>
+augroup END
