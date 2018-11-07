@@ -5,7 +5,7 @@ source ~/.vim_runtime/vimrcs/filetypes.vim
 source ~/.vim_runtime/vimrcs/plugins_config.vim
 source ~/.vim_runtime/vimrcs/extended.vim
 
-" My Original 
+" My Original
 source ~/.vim/src/shortcuts.vim
 source ~/.vim/src/snippets.vim
 

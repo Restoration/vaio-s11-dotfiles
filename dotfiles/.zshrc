@@ -110,6 +110,13 @@ alias ac="acpi"
 alias wifim="sudo wifi-menu"
 alias outpkg="sudo pacman -Qqen > pkg.list"
 alias outypkg="yaourt -Qqen > yaourt.pkg.list"
+alias xron="xrandr --output eDP1 --auto --output DP1 --auto --right-of eDP1"
+alias xroff="xrandr --output DP1 --off"
+
+# SDK Path
+export ANDROID_HOME=/opt/android-sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # auto execute tmux
 #[[ -z "$TMUX" && ! -z "$PS1" ]] && exec tmux
@@ -119,7 +126,7 @@ alias outypkg="yaourt -Qqen > yaourt.pkg.list"
 
 # Laravel5 basic command completion
 _laravel5_get_command_list () {
-	php artisan --raw --no-ansi list | sed "s/[[:space:]].*//g"
+    php artisan --raw --no-ansi list | sed "s/[[:space:]].*//g"
 }
 
 _laravel5 () {
@@ -138,3 +145,15 @@ alias la5='php artisan'
 alias la5cache='php artisan cache:clear'
 alias la5routes='php artisan route:list'
 alias la5vendor='php artisan vendor:publish'
+
+# ReactJS
+alias cra="create-react-app "
+alias cran="create-react-native-app "
+
+# Http proxy
+export HTTP_PROXY_REQUEST_FULLURI=0
+export HTTPS_PROXY_REQUEST_FULLURI=0
+
+# Stack
+export PATH="$PATH:/usr/local/bin"
+export PATH="$PATH:$HOME/.local/bin"
