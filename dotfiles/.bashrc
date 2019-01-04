@@ -25,3 +25,4 @@ alias dis="xbacklight -set"
 alias v="vim"
 alias r="ranger"
 alias g="git"
+

@@ -12,7 +12,7 @@ let g:colors_name = "citylights"
 
 hi Cursor ctermfg=16 ctermbg=69 cterm=NONE guifg=#1d252c guibg=#539afc gui=NONE
 hi Visual ctermfg=NONE ctermbg=23 cterm=NONE guifg=NONE guibg=#2d3741 gui=NONE
-hi CursorLine ctermfg=NONE ctermbg=17 cterm=NONE guifg=NONE guibg=#252f38 gui=NONE
+hi CursorLine ctermfg=white ctermbg=NONE cterm=NONE guifg=NONE guibg=#252f38 gui=NONE
 hi CursorColumn ctermfg=NONE ctermbg=17 cterm=NONE guifg=NONE guibg=#252f38 gui=NONE
 hi ColorColumn ctermfg=NONE ctermbg=17 cterm=NONE guifg=NONE guibg=#252f38 gui=NONE
 hi LineNr ctermfg=59 ctermbg=17 cterm=NONE guifg=#475967 guibg=#252f38 gui=NONE

@@ -1,2 +1,0 @@
-100
-['AtsushiM/sass-compile.vim', 'AtsushiM/search-parent.vim', 'Shougo/dein.vim', 'Shougo/neocomplete.vim', 'Shougo/neosnippet', 'Shougo/neosnippet-snippets', 'Shougo/vimproc.vim', 'jistr/vim-nerdtree-tabs', 'majutsushi/tagbar', 'mattn/emmet-vim', 'osyo-manga/vim-over', 'reireias/vim-cheatsheet', 'scrooloose/nerdtree', 'suan/vim-instant-markdown', 'terryma/vim-multiple-cursors', 'tpope/vim-fugitive', 'vim-airline/vim-airline']
