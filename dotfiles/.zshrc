@@ -157,3 +157,6 @@ export HTTPS_PROXY_REQUEST_FULLURI=0
 # Stack
 export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:$HOME/.local/bin"
+
+# Nodebrew
+# export PATH=$HOME/.nodebrew/current/bin:$PATH

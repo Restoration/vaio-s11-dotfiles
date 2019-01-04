@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --bg-fill '/home/arch/.config/i3/wallpaper/linux-arch-linux-gnulinux-HD-Wallpapers.png' 

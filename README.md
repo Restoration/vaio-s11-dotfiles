@@ -14,6 +14,7 @@ VAIO S11 environment for ArchLinux.
 
 ### Window Manager
 * awesome
+* i3
 
 ### Editor
 * Vim ([The Ultimate Vim configuration Awesome version](https://github.com/amix/vimrc) and my custom)
@@ -23,8 +24,11 @@ VAIO S11 environment for ArchLinux.
 * bash
 * zsh
 
-### Terminal
+### Packages
 * ROXTerm
+* feh
+* urxvt
+* ranger
 
 ## Install
 ```
@@ -35,11 +39,9 @@ $ git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 ```
 
 ## License
-
 [GNU](https://github.com/Restoration/ArchLinux-dotfiles/blob/master/LICENSE)
 
 ## Author
-
 Ryota Yamamoto  
 [RyotArch](https://github.com/Restoration)  
 [Ryota.Y](http://developer-ryota.com)  
