@@ -32,6 +32,7 @@ CONFIG_DOT_FILES=(
   nvim
   roxterm.sourceforge.net
   ranger
+  i3
 )
 
 for file in ${CONFIG_DOT_FILES[@]}
@@ -46,4 +47,14 @@ xrdb -m ~/.Xdefaults
 # Change my default shell for zsh
 #---------------------------------------------------
 chsh -s /bin/zsh
+
+# The Ultimate Vim configuration Awesome version
+#---------------------------------------------------
+git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+
+# Install public ArchLinux package
+# if you wanna use my same package, remove comment out
+# refere pkg directory file
+#---------------------------------------------------
+# pacman -S < ~/dotfiles/pkg/pkg.list
 
