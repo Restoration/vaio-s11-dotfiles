@@ -17,6 +17,7 @@ DOT_FILES=(
   .Xdefaults
   .tmux.conf
   .fehbg
+  .conkyrc
 )
 
 for file in ${DOT_FILES[@]}

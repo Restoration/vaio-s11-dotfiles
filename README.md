@@ -19,6 +19,7 @@ VAIO S11 environment for ArchLinux. My start up dotfiles which is original confi
 * bash
 * zsh
 * tmux
+* conky
 * [The Ultimate Vim configuration Awesome version](https://github.com/amix/vimrc)
 
 ## Install
