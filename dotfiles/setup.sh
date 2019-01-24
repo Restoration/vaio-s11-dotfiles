@@ -41,6 +41,15 @@ do
   ln -s $HOME/dotfiles/dotfiles/.config/$file $HOME/.config/$file
 done
 
+
+# Install dein
+#---------------------------------------------------
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+mkdir -p $HOME/.vim/dein
+sh installer.sh $HOME/.vim/dein
+rm installer.sh
+
+
 # urxvt setup
 #---------------------------------------------------
 xrdb -m ~/.Xdefaults
