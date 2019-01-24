@@ -79,14 +79,13 @@ nmap :tn  :tabnew<CR>
 nmap :ex  :exit<CR>
 nmap :ps  :split<CR>
 nmap :vs  :vsplit<CR>
-"nmap :nt  :NERDTree<CR>
-nmap :nt  :NERDTreeTabsToggle<CR>
+nmap :nt  :NERDTreeToggle<CR>
 nmap :tm  :terminal<CR>
 nmap :mc  :MultipleCursorsFind<CR>
-nmap :tag :TagbarShowTag<CR>
-"nmap ^E ^E,
-nmap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
+nmap :ts  :TagbarToggle<CR>
 nmap :vc :VCoolor<CR>
+nmap <Esc><Esc> :nohlsearch<CR><Esc> 
+nmap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
 
 
 
@@ -126,9 +125,8 @@ call dein#add('reireias/vim-cheatsheet')
 call dein#add('terryma/vim-multiple-cursors')
 call dein#add('vim-airline/vim-airline')
 call dein#add('ctrlpvim/ctrlp.vim')
-call dein#add('KabbAmine/vCoolor.vim')
+"call dein#add('KabbAmine/vCoolor.vim')
 call dein#add('cohama/lexima.vim')
-call dein#add('scrooloose/nerdcommenter')
 call dein#add('posva/vim-vue')
 call dein#end()
 
@@ -272,64 +270,36 @@ let g:tagbar_autoshowtag = 1
 "---------------------------------------------------
 let g:NERDTreeWinPos = "left"
 
-
-"NERD Commenter
-"---------------------------------------------------
-" Add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1
-
-" Use compact syntax for prettified multi-line comments
-let g:NERDCompactSexyComs = 1
-
-" Align line-wise comment delimiters flush left instead of following code indentation
-let g:NERDDefaultAlign = 'left'
-
-" Set a language to use its alternate delimiters by default
-let g:NERDAltDelims_java = 1
-
-" Add your own custom formats or override the defaults
-let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
-
-" Allow commenting and inverting empty lines (useful when commenting a region)
-let g:NERDCommentEmptyLines = 1
-
-" Enable trimming of trailing whitespace when uncommenting
-let g:NERDTrimTrailingWhitespace = 1
-
-" Enable NERDCommenterToggle to check all selected lines is commented or not 
-let g:NERDToggleCheckAllLines = 1
-
 "vCoolor
 "---------------------------------------------------
-let g:vcoolor_lowercase = 1
-let g:vcoolor_disable_mappings = 1
-let g:vcoolor_map = '<leader>g'
+"let g:vcoolor_lowercase = 1
+"let g:vcoolor_disable_mappings = 1
+"let g:vcoolor_map = '<leader>g'
 
 "Autocomand
 "---------------------------------------------------
 "autocmd VimEnter * execute 'NERDTree'
 "autocmd VimEnter * execute 'TagbarShowTag'
-autocmd VimEnter * execute 'syntax on'
-
+"autocmd VimEnter * execute 'syntax on'
 " let g:nerdtree_tabs_open_on_console_startup=1
 
 "Colorscheme
 "-----------------------------------------------------
-autocmd ColorScheme * highlight Normal ctermbg=none
-autocmd ColorScheme * highlight LineNr ctermbg=none
-augroup TransparentBG
-        autocmd!
-        autocmd Colorscheme * highlight Normal ctermbg=none
-        autocmd Colorscheme * highlight NonText ctermbg=none
-        autocmd Colorscheme * highlight LineNr ctermbg=none
-        autocmd Colorscheme * highlight Folded ctermbg=none
-        autocmd Colorscheme * highlight EndOfBuffer ctermbg=none
-augroup END
+"autocmd ColorScheme * highlight Normal ctermbg=none
+"autocmd ColorScheme * highlight LineNr ctermbg=none
+"augroup TransparentBG
+"        autocmd!
+"        autocmd Colorscheme * highlight Normal ctermbg=none
+"        autocmd Colorscheme * highlight NonText ctermbg=none
+"        autocmd Colorscheme * highlight LineNr ctermbg=none
+"        autocmd Colorscheme * highlight Folded ctermbg=none
+"        autocmd Colorscheme * highlight EndOfBuffer ctermbg=none
+"augroup END
 
 "colorscheme archery
-colorscheme citylights
-set showtabline=2
-set termguicolors
-set t_Co=25
-let g:airline_theme = 'archery'
+"colorscheme citylights
+"set showtabline=2
+"set termguicolors
+"set t_Co=25
+"let g:airline_theme = 'archery'
 
