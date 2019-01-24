@@ -4,44 +4,33 @@
 This dotfile is my ArchLinux config.
 
 ## Description
-
-VAIO S11 environment for ArchLinux.
+VAIO S11 environment for ArchLinux. My start up dotfiles which is original configuration.
 
 ## Requirement
-
-### Login Manager
 * SLiM
-
-### Window Manager
 * awesome
 * i3
-
-### Editor
-* Vim ([The Ultimate Vim configuration Awesome version](https://github.com/amix/vimrc) and my custom)
-* NeoVim (My Original configuration)
-
-### Shell
-* bash
-* zsh
-
-### Packages
+* Vim
+* NeoVim
 * ROXTerm
 * feh
 * urxvt
 * ranger
+* bash
+* zsh
+* tmux
+* conky
+* [The Ultimate Vim configuration Awesome version](https://github.com/amix/vimrc)
 
 ## Install
 ```
-$ git clone https://github.com/Restoration/ArchLinux-dotfiles.git
-$ cd ArchLinux-dotfiles/dotfiles
+$ git clone https://github.com/Restoration/dotfiles.git
+$ cd dotfiles/dotfiles
 $ ./setup.sh
-$ git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 ```
 
 ## License
 [GNU](https://github.com/Restoration/ArchLinux-dotfiles/blob/master/LICENSE)
 
 ## Author
-Ryota Yamamoto  
-[RyotArch](https://github.com/Restoration)  
-[Ryota.Y](http://developer-ryota.com)  
+[Ryota Yamamoto](http://www.developer-ryota.com/)  
