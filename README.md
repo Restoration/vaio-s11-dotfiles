@@ -11,7 +11,6 @@ VAIO S11 environment for ArchLinux. My start up dotfiles which is original confi
 * awesome
 * i3
 * Vim
-* NeoVim
 * ROXTerm
 * feh
 * urxvt
