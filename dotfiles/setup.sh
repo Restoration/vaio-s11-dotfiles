@@ -22,7 +22,7 @@ DOT_FILES=(
 
 for file in ${DOT_FILES[@]}
 do
-  ln -s $HOME/dotfiles/$file $HOME/$file
+  ln -s $HOME/dotfiles/dotfiles/$file $HOME/$file
 done
 
 
@@ -38,7 +38,7 @@ CONFIG_DOT_FILES=(
 
 for file in ${CONFIG_DOT_FILES[@]}
 do
-  ln -s $HOME/dotfiles/.config/$file $HOME/.config/$file
+  ln -s $HOME/dotfiles/dotfiles/.config/$file $HOME/.config/$file
 done
 
 # urxvt setup
@@ -47,11 +47,11 @@ xrdb -m ~/.Xdefaults
 
 # Change my default shell for zsh
 #---------------------------------------------------
-chsh -s /bin/zsh
+# chsh -s /bin/zsh
 
 # The Ultimate Vim configuration Awesome version
 #---------------------------------------------------
-git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+# git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 
 # Install public ArchLinux package
 # if you wanna use my same package, remove comment out
@@ -62,4 +62,4 @@ git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 
 # Install on Node package manager
 #---------------------------------------------------
-sudo npm install -g eslint eslint-plugin-vue
+# sudo npm install -g eslint eslint-plugin-vue
