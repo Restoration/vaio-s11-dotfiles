@@ -112,6 +112,7 @@ call dein#add('reireias/vim-cheatsheet')
 call dein#add('terryma/vim-multiple-cursors')
 call dein#add('vim-airline/vim-airline')
 call dein#add('ctrlpvim/ctrlp.vim')
+call dein#add('posva/vim-vue')
 call dein#end()
 
 

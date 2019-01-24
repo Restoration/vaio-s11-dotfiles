@@ -59,3 +59,7 @@ git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 #---------------------------------------------------
 # pacman -S < ~/dotfiles/pkg/pkg.list
 
+
+# Install on Node package manager
+#---------------------------------------------------
+sudo npm install -g eslint eslint-plugin-vue
