@@ -7,7 +7,6 @@ URxvt.cursorColor:     white
 
 ! special
 *.foreground:   #ffffff
-*.background:   [90]#1b1b1b
 *.cursorColor:  #ffffff
 
 ! black
