@@ -160,3 +160,6 @@ export PATH="$PATH:$HOME/.local/bin"
 
 # Nodebrew
 # export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+# PlantUML
+java -jar $HOME/dotfiles/dotfiles/plantuml.jar -tpng $@
