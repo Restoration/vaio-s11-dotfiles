@@ -102,7 +102,7 @@ source $ZSH/oh-my-zsh.sh
 alias p="sudo pacman "
 alias mi="alsamixer"
 alias mp="mocp"
-alias d="xbacklight -set"
+alias disp="xbacklight -set"
 alias v="vim"
 alias r="ranger"
 alias g="git"
@@ -112,6 +112,7 @@ alias outpkg="sudo pacman -Qqen > pkg.list"
 alias outypkg="yaourt -Qqen > yaourt.pkg.list"
 alias xron="xrandr --output eDP1 --auto --output DP1 --auto --right-of eDP1"
 alias xroff="xrandr --output DP1 --off"
+alias isopkg="sudo pacman -Rns $(pacman -Qtdq)"
 
 # SDK Path
 export ANDROID_HOME=/opt/android-sdk
@@ -162,4 +163,4 @@ export PATH="$PATH:$HOME/.local/bin"
 # export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # PlantUML
-java -jar $HOME/dotfiles/dotfiles/plantuml.jar -tpng $@
+#java -jar $HOME/dotfiles/dotfiles/plantuml.jar -tpng $@
