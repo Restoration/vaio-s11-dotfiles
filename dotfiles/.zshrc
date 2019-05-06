@@ -102,6 +102,7 @@ source $ZSH/oh-my-zsh.sh
 alias p="sudo pacman "
 alias mi="alsamixer"
 alias mp="mocp"
+alias cm-"cmus"
 alias disp="xbacklight -set"
 alias v="vim"
 alias r="ranger"
@@ -123,31 +124,6 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # auto execute tmux
 #[[ -z "$TMUX" && ! -z "$PS1" ]] && exec tmux
 
-# Laravel Path
-#export PATH="~/.config/composer/vendor/bin:$PATH"
-
-# Laravel5 basic command completion
-_laravel5_get_command_list () {
-    php artisan --raw --no-ansi list | sed "s/[[:space:]].*//g"
-}
-
-_laravel5 () {
-  if [ -f artisan ]; then
-    compadd `_laravel5_get_command_list`
-  fi
-}
-
-compdef _laravel5 artisan
-compdef _laravel5 la5
-
-#Alias
-alias nla='composer create-project laravel/laravel '
-alias la5='php artisan'
-
-alias la5cache='php artisan cache:clear'
-alias la5routes='php artisan route:list'
-alias la5vendor='php artisan vendor:publish'
-
 # ReactJS
 alias cra="create-react-app "
 alias cran="create-react-native-app "
@@ -156,15 +132,8 @@ alias cran="create-react-native-app "
 export HTTP_PROXY_REQUEST_FULLURI=0
 export HTTPS_PROXY_REQUEST_FULLURI=0
 
-# Stack
-export PATH="$PATH:/usr/local/bin"
-export PATH="$PATH:$HOME/.local/bin"
-
 # Nodebrew
 # export PATH=$HOME/.nodebrew/current/bin:$PATH
-
-# PlantUML
-#java -jar $HOME/dotfiles/dotfiles/plantuml.jar -tpng $@
 
 # Docker
 alias resetDocker='docker system prune'
