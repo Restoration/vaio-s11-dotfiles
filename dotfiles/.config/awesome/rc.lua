@@ -41,12 +41,12 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
- beautiful.init("~/.config/awesome/default/theme.lua")
--- beautiful.init("~/.config/awesome/ArchLinux/theme.lua")
+-- beautiful.init("~/.config/awesome/default/theme.lua")
+ beautiful.init("~/.config/awesome/ArchLinux/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 -- terminal = "xfce4-terminal"
-terminal = "roxterm"
+terminal = "xfce4-terminal"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
