@@ -31,9 +31,7 @@ mkdir -p $HOME/.config
 CONFIG_DOT_FILES=(
   awesome
   nvim
-  roxterm.sourceforge.net
   ranger
-  i3
 )
 
 for file in ${CONFIG_DOT_FILES[@]}
@@ -41,13 +39,6 @@ do
   ln -s $HOME/dotfiles/dotfiles/.config/$file $HOME/.config/$file
 done
 
-
-# Install dein
-#---------------------------------------------------
-curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-mkdir -p $HOME/.vim/dein
-sh installer.sh $HOME/.vim/dein
-rm installer.sh
 
 
 # urxvt setup
