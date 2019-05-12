@@ -41,7 +41,7 @@ done
 
 # Install my standard packages
 #---------------------------------------------------
-pacman -S zsh sudo vim firefox rxvt-unicode xterm neovim gvim
+pacman -S zsh sudo vim firefox rxvt-unicode xterm neovim gvim python3
 
 # urxvt setup
 #---------------------------------------------------
@@ -69,6 +69,9 @@ rm -r package-query yaourt
 # Develop tools
 #---------------------------------------------------
 yaourt -S nodejs gitkraken boostnote tusk postman chromium google-chrome dropbox slack-desktop docker dockstation
+
+
+sudo pip3 install --upgrade neovim
 
 
 # Install public ArchLinux package
