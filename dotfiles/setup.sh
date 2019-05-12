@@ -80,3 +80,10 @@ sudo pip3 install --upgrade neovim
 #---------------------------------------------------
 # pacman -S < ~/dotfiles/pkg/pkg.list
 
+
+#xfce4
+git clone https://github.com/arcticicestudio/nord-xfce-terminal.git
+cd nord-xfce-terminal
+sh install.sh
+cd ../
+rm -r nord-xfce-terminal
