@@ -15,8 +15,10 @@ PS1='[\u@\h \W]\$ '
 # Laravel
 export PATH="~/.config/composer/vendor/bin:$PATH"
 
-#export VISUAL="nvim"
-
+# Default Editor
+VISUAL=nvim; 
+export VISUAL EDITOR=nvim;
+export EDITOR
 
 # My aliases
 alias p="sudo pacman "

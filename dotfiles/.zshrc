@@ -63,7 +63,6 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git,
   zsh-autosuggestions
 )
 
@@ -137,3 +136,8 @@ export HTTPS_PROXY_REQUEST_FULLURI=0
 
 # Docker
 alias resetDocker='docker system prune'
+
+# Default Editor
+VISUAL=nvim;
+export VISUAL EDITOR=nvim;
+export EDITOR
