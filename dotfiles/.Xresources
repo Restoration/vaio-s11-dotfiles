@@ -1,7 +1,7 @@
 URxvt.intensityStyles: false
 URxvt.depth:           32
 urxvt.background:      rgba:0000/0000/0200/c800
-URxvt.font:            xft:Ricty:size=12
+URxvt.font:            xft:Ricty:size=16
 URxvt.scrollBar:       false
 URxvt.cursorColor:     white
 
