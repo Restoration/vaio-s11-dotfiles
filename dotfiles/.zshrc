@@ -113,12 +113,15 @@ alias outypkg="yaourt -Qqen > yaourt.pkg.list"
 alias xron="xrandr --output eDP1 --auto --output DP1 --auto --right-of eDP1"
 alias xroff="xrandr --output DP1 --off"
 alias isopkg="sudo pacman -Rns $(pacman -Qtdq)"
+alias delpaccache="sudo pacman -Sc"
 alias deldotds='sudo find / -name ".DS_Store" -delete'
+alias xre='xrdb -m ~/.Xresources'
+
 
 # SDK Path
-export ANDROID_HOME=/opt/android-sdk
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+#export ANDROID_HOME=/opt/android-sdk
+#export PATH=$PATH:$ANDROID_HOME/tools
+#export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # auto execute tmux
 #[[ -z "$TMUX" && ! -z "$PS1" ]] && exec tmux
@@ -132,7 +135,7 @@ export HTTP_PROXY_REQUEST_FULLURI=0
 export HTTPS_PROXY_REQUEST_FULLURI=0
 
 # Nodebrew
-# export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # Docker
 alias resetDocker='docker system prune'
@@ -141,3 +144,8 @@ alias resetDocker='docker system prune'
 VISUAL=nvim;
 export VISUAL EDITOR=nvim;
 export EDITOR
+
+# go
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
