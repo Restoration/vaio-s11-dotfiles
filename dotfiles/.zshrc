@@ -146,6 +146,6 @@ export VISUAL EDITOR=nvim;
 export EDITOR
 
 # go
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
+export GOPATH=~/go
+export PATH="$PATH:$GOPATH/bin"
+export GOPATH=$GOPATH:/home/arch/Repos/go
