@@ -114,6 +114,7 @@ alias xron="xrandr --output eDP1 --auto --output DP1 --auto --right-of eDP1"
 alias xroff="xrandr --output DP1 --off"
 alias isopkg="sudo pacman -Rns $(pacman -Qtdq)"
 alias delpaccache="sudo pacman -Sc"
+alias optimize="sudo pacman -Sc && pacman-optimize"
 alias deldotds='sudo find / -name ".DS_Store" -delete'
 alias xre='xrdb -m ~/.Xresources'
 
