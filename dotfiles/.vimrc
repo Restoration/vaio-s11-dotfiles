@@ -125,9 +125,10 @@ call dein#add('reireias/vim-cheatsheet')
 call dein#add('terryma/vim-multiple-cursors')
 call dein#add('vim-airline/vim-airline')
 call dein#add('ctrlpvim/ctrlp.vim')
-"call dein#add('KabbAmine/vCoolor.vim')
+call dein#add('KabbAmine/vCoolor.vim')
 call dein#add('cohama/lexima.vim')
 call dein#add('posva/vim-vue')
+call dein#add('fatih/vim-go')
 call dein#end()
 
 
@@ -258,13 +259,10 @@ let g:user_emmet_settings = {
     let g:sass_compile_aftercmd = ''
 "}}}
 
-
-
 "Tagbar
 "---------------------------------------------------
 let g:tagbar_width = 30
 let g:tagbar_autoshowtag = 1
-
 
 "NERDTree
 "---------------------------------------------------
@@ -272,34 +270,19 @@ let g:NERDTreeWinPos = "left"
 
 "vCoolor
 "---------------------------------------------------
-"let g:vcoolor_lowercase = 1
-"let g:vcoolor_disable_mappings = 1
-"let g:vcoolor_map = '<leader>g'
+let g:vcoolor_lowercase = 1
+let g:vcoolor_disable_mappings = 1
+let g:vcoolor_map = '<leader>g'
 
 "Autocomand
 "---------------------------------------------------
-"autocmd VimEnter * execute 'NERDTree'
-"autocmd VimEnter * execute 'TagbarShowTag'
-"autocmd VimEnter * execute 'syntax on'
-" let g:nerdtree_tabs_open_on_console_startup=1
+let g:nerdtree_tabs_open_on_console_startup=1
 
 "Colorscheme
 "-----------------------------------------------------
-"autocmd ColorScheme * highlight Normal ctermbg=none
-"autocmd ColorScheme * highlight LineNr ctermbg=none
-"augroup TransparentBG
-"        autocmd!
-"        autocmd Colorscheme * highlight Normal ctermbg=none
-"        autocmd Colorscheme * highlight NonText ctermbg=none
-"        autocmd Colorscheme * highlight LineNr ctermbg=none
-"        autocmd Colorscheme * highlight Folded ctermbg=none
-"        autocmd Colorscheme * highlight EndOfBuffer ctermbg=none
-"augroup END
-
-"colorscheme archery
-"colorscheme citylights
-"set showtabline=2
-"set termguicolors
-"set t_Co=25
-"let g:airline_theme = 'archery'
-
+set showtabline=2
+set laststatus=2
+set termguicolors
+set t_Co=25
+colorscheme archery
+let g:airline_theme = 'archery'
