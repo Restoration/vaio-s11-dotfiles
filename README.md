@@ -9,10 +9,7 @@ VAIO S11 environment for ArchLinux. My start up dotfiles which is original confi
 ## Requirement
 * SLiM
 * awesome
-* i3
 * Vim
-* NeoVim
-* ROXTerm
 * feh
 * urxvt
 * ranger

@@ -63,7 +63,6 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git,
   zsh-autosuggestions
 )
 
@@ -102,7 +101,8 @@ source $ZSH/oh-my-zsh.sh
 alias p="sudo pacman "
 alias mi="alsamixer"
 alias mp="mocp"
-alias d="xbacklight -set"
+alias cm-"cmus"
+alias disp="xbacklight -set"
 alias v="vim"
 alias r="ranger"
 alias g="git"
@@ -112,39 +112,20 @@ alias outpkg="sudo pacman -Qqen > pkg.list"
 alias outypkg="yaourt -Qqen > yaourt.pkg.list"
 alias xron="xrandr --output eDP1 --auto --output DP1 --auto --right-of eDP1"
 alias xroff="xrandr --output DP1 --off"
+alias isopkg="sudo pacman -Rns $(pacman -Qtdq)"
+alias delpaccache="sudo pacman -Sc"
+alias optimize="sudo pacman -Sc && pacman-optimize"
+alias deldotds='sudo find / -name ".DS_Store" -delete'
+alias xre='xrdb -m ~/.Xresources'
+
 
 # SDK Path
-export ANDROID_HOME=/opt/android-sdk
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+#export ANDROID_HOME=/opt/android-sdk
+#export PATH=$PATH:$ANDROID_HOME/tools
+#export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # auto execute tmux
 #[[ -z "$TMUX" && ! -z "$PS1" ]] && exec tmux
-
-# Laravel Path
-#export PATH="~/.config/composer/vendor/bin:$PATH"
-
-# Laravel5 basic command completion
-_laravel5_get_command_list () {
-    php artisan --raw --no-ansi list | sed "s/[[:space:]].*//g"
-}
-
-_laravel5 () {
-  if [ -f artisan ]; then
-    compadd `_laravel5_get_command_list`
-  fi
-}
-
-compdef _laravel5 artisan
-compdef _laravel5 la5
-
-#Alias
-alias nla='composer create-project laravel/laravel '
-alias la5='php artisan'
-
-alias la5cache='php artisan cache:clear'
-alias la5routes='php artisan route:list'
-alias la5vendor='php artisan vendor:publish'
 
 # ReactJS
 alias cra="create-react-app "
@@ -154,9 +135,18 @@ alias cran="create-react-native-app "
 export HTTP_PROXY_REQUEST_FULLURI=0
 export HTTPS_PROXY_REQUEST_FULLURI=0
 
-# Stack
-export PATH="$PATH:/usr/local/bin"
-export PATH="$PATH:$HOME/.local/bin"
-
 # Nodebrew
-# export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+# Docker
+alias resetDocker='docker system prune'
+
+# Default Editor
+VISUAL=nvim;
+export VISUAL EDITOR=nvim;
+export EDITOR
+
+# go
+export GOPATH=~/go
+export PATH="$PATH:$GOPATH/bin"
+export GOPATH=$GOPATH:/home/arch/Repos/go
