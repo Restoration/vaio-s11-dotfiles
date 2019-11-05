@@ -14,7 +14,7 @@ local theme = {}
 theme.font          = "sans 13"
 
 theme.bg_normal     = "#333333"
-theme.bg_focus      = "#333333"
+theme.bg_focus      = "#535d6c"
 theme.bg_urgent     = "#ff0000"
 theme.bg_minimize   = "#333333"
 theme.bg_systray    = theme.bg_normal
