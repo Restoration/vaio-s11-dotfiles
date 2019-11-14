@@ -1,8 +1,12 @@
 #!/bin/bash
 
-# Get packages
+# Install my standard packages
 #---------------------------------------------------
-# oh my zsh
+pacman -S zsh sudo vim firefox rxvt-unicode xterm neovim gvim python3 ranger sudo pacman -S npm nodejs yarn chromium feh vlc acpi fcitx-im fcitx-configtool fcitx-mozc
+
+# ZSHELL
+#---------------------------------------------------
+chsh -s /bin/zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Setup dotfiles
@@ -39,17 +43,9 @@ do
   ln -s $HOME/dotfiles/dotfiles/.config/$file $HOME/.config/$file
 done
 
-# Install my standard packages
-#---------------------------------------------------
-pacman -S zsh sudo vim firefox rxvt-unicode xterm neovim gvim python3 ranger sudo pacman -S npm nodejs yarn
-
 # urxvt setup
 #---------------------------------------------------
 xrdb -m ~/.Xresources
-
-# Change my default shell for zsh
-#---------------------------------------------------
-chsh -s /bin/zsh
 
 
 # Install Package Query & Yaourt
@@ -68,7 +64,7 @@ rm -r package-query yaourt
 
 # Develop tools
 #---------------------------------------------------
-yaourt -S nodejs gitkraken boostnote tusk postman chromium google-chrome dropbox slack-desktop docker dockstation
+yaourt -S gitkraken boostnote tusk postman google-chrome dropbox slack-desktop docker dockstation
 
 
 sudo pip3 install --upgrade neovim
@@ -79,11 +75,3 @@ sudo pip3 install --upgrade neovim
 # refere pkg directory file
 #---------------------------------------------------
 # pacman -S < ~/dotfiles/pkg/pkg.list
-
-
-#xfce4
-git clone https://github.com/arcticicestudio/nord-xfce-terminal.git
-cd nord-xfce-terminal
-sh install.sh
-cd ../
-rm -r nord-xfce-terminal
