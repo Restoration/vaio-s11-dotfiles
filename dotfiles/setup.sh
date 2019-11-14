@@ -14,7 +14,7 @@ DOT_FILES=(
   .vimrc
   .vim
   .xinitrc
-  .Xdefaults
+  .Xresources
   .tmux.conf
   .fehbg
   .conkyrc
@@ -41,11 +41,11 @@ done
 
 # Install my standard packages
 #---------------------------------------------------
-pacman -S zsh sudo vim firefox rxvt-unicode xterm neovim gvim python3
+pacman -S zsh sudo vim firefox rxvt-unicode xterm neovim gvim python3 ranger sudo pacman -S npm nodejs yarn
 
 # urxvt setup
 #---------------------------------------------------
-xrdb -m ~/.Xdefaults
+xrdb -m ~/.Xresources
 
 # Change my default shell for zsh
 #---------------------------------------------------

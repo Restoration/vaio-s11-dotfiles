@@ -45,5 +45,6 @@ URxvt.cursorColor:     white
 *.color15:      #edeff2
 
 
+
 !! Transparency (0-255):
 *.alpha: 230
