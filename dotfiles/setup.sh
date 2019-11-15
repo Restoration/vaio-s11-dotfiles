@@ -1,9 +1,17 @@
 #!/bin/bash
 
-# Get packages
+# Install my standard packages
 #---------------------------------------------------
-# oh my zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+read -p "Are you sure you want to install a standard packages? (y/n) :" YN
+if [ "${YN}" = "y" ]; then
+  sudo pacman -S zsh sudo vim firefox rxvt-unicode xterm neovim gvim python3 ranger npm nodejs yarn chromium feh vlc acpi fcitx-im fcitx-configtool fcitx-mozc compton moc otf-ipafont ttf-hack ttf-liberation conky python-pip xbacklight
+fi
+
+# ZSHELL
+#---------------------------------------------------
+chsh -s /bin/zsh
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions
 
 # Setup dotfiles
 #---------------------------------------------------
@@ -25,65 +33,27 @@ do
   ln -s $HOME/dotfiles/dotfiles/$file $HOME/$file
 done
 
-
 mkdir -p $HOME/.config
-
-CONFIG_DOT_FILES=(
-  awesome
-  nvim
-  ranger
-)
-
-for file in ${CONFIG_DOT_FILES[@]}
-do
-  ln -s $HOME/dotfiles/dotfiles/.config/$file $HOME/.config/$file
-done
-
-# Install my standard packages
-#---------------------------------------------------
-pacman -S zsh sudo vim firefox rxvt-unicode xterm neovim gvim python3 ranger sudo pacman -S npm nodejs yarn
+ln -s $HOME/dotfiles/dotfiles/.config/awesome $HOME/.config/awesome
+ln -s $HOME/dotfiles/dotfiles/.config/ranger $HOME/.config/ranger
 
 # urxvt setup
 #---------------------------------------------------
 xrdb -m ~/.Xresources
 
-# Change my default shell for zsh
+# Install yay package manager
 #---------------------------------------------------
-chsh -s /bin/zsh
-
-
-# Install Package Query & Yaourt
-#---------------------------------------------------
-curl -OL https://aur.archlinux.org/cgit/aur.git/snapshot/package-query.tar.gz
-tar zxf package-query.tar.gz
-cd package-query
+git clone https://aur.archlinux.org/yay.git
+cd yay
 makepkg -si
 cd ../
-curl -OL https://aur.archlinux.org/cgit/aur.git/snapshot/yaourt.tar.gz
-tar zxf yaourt-1.5.tar.gz
-cd yaourt
-makepkg -si
-cd ../
-rm -r package-query yaourt
+sudo rm -r yay
 
 # Develop tools
 #---------------------------------------------------
-yaourt -S nodejs gitkraken boostnote tusk postman chromium google-chrome dropbox slack-desktop docker dockstation
-
+read -p "Are you sure you want to install a standard develop AUR packages? (y/n) :" YN
+if [ "${YN}" = "y" ]; then
+  yay -S gitkraken boostnote tusk postman google-chrome dropbox slack-desktop docker dockstation
+fi
 
 sudo pip3 install --upgrade neovim
-
-
-# Install public ArchLinux package
-# if you wanna use my same package, remove comment out
-# refere pkg directory file
-#---------------------------------------------------
-# pacman -S < ~/dotfiles/pkg/pkg.list
-
-
-#xfce4
-git clone https://github.com/arcticicestudio/nord-xfce-terminal.git
-cd nord-xfce-terminal
-sh install.sh
-cd ../
-rm -r nord-xfce-terminal
