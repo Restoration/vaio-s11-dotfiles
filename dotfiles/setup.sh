@@ -35,7 +35,6 @@ done
 
 mkdir -p $HOME/.config
 ln -s $HOME/dotfiles/dotfiles/.config/awesome $HOME/.config/awesome
-ln -s $HOME/dotfiles/dotfiles/.config/nvim $HOME/.config/nvim
 ln -s $HOME/dotfiles/dotfiles/.config/ranger $HOME/.config/ranger
 
 # urxvt setup
@@ -48,7 +47,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 cd ../
-rm -r yay
+sudo rm -r yay
 
 # Develop tools
 #---------------------------------------------------
