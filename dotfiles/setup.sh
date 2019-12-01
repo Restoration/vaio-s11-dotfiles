@@ -5,7 +5,7 @@
 read -p "Are you sure you want to install a standard packages? (y/n) :" YN
 if [ "${YN}" = "y" ]; then
   sudo pacman -S zsh sudo vim firefox rxvt-unicode xterm neovim gvim python3 ranger npm nodejs yarn chromium feh vlc acpi fcitx-im fcitx-configtool fcitx-mozc compton moc otf-ipafont ttf-hack ttf-liberation conky python-pip xbacklight
-fi ufw
+fi ufw bluez bluez-utils blueman
 
 # ZSHELL
 #---------------------------------------------------
@@ -44,6 +44,10 @@ xrdb -m ~/.Xresources
 # Firewall on
 #---------------------------------------------------
 ufw enable
+
+# bluetooth on
+#---------------------------------------------------
+systemctl enable bluetooth
 
 
 # Install yay package manager
