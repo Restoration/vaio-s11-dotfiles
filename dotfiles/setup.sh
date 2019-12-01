@@ -5,7 +5,7 @@
 read -p "Are you sure you want to install a standard packages? (y/n) :" YN
 if [ "${YN}" = "y" ]; then
   sudo pacman -S zsh sudo vim firefox rxvt-unicode xterm neovim gvim python3 ranger npm nodejs yarn chromium feh vlc acpi fcitx-im fcitx-configtool fcitx-mozc compton moc otf-ipafont ttf-hack ttf-liberation conky python-pip xbacklight
-fi
+fi ufw
 
 # ZSHELL
 #---------------------------------------------------
@@ -40,6 +40,11 @@ ln -s $HOME/dotfiles/dotfiles/.config/ranger $HOME/.config/ranger
 # urxvt setup
 #---------------------------------------------------
 xrdb -m ~/.Xresources
+
+# Firewall on
+#---------------------------------------------------
+ufw enable
+
 
 # Install yay package manager
 #---------------------------------------------------
