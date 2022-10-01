@@ -36,6 +36,8 @@ done
 mkdir -p $HOME/.config
 ln -s $HOME/dotfiles/dotfiles/.config/awesome $HOME/.config/awesome
 ln -s $HOME/dotfiles/dotfiles/.config/ranger $HOME/.config/ranger
+ln -s $HOME/dotfiles/dotfiles/.config/ranger $HOME/.config/i3
+ln -s $HOME/dotfiles/dotfiles/.config/ranger $HOME/.config/polybar
 
 # urxvt setup
 #---------------------------------------------------
